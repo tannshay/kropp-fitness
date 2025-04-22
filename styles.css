@@ -323,6 +323,14 @@ h6 {
   font-size: clamp(24px, 3.12vw, 60px);
 }
 
+.section-description {
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
 .backdrop-title {
   position: relative;
   z-index: 2;
@@ -341,18 +349,19 @@ h6 {
 .backdrop-title::after {
   position: absolute;
   z-index: -1;
-  top: -0.45em;
+  top: -0.3em;
   left: -0.6em;
   content: attr(data-title);
   font-family: var(--font-family-accent);
   font-size: 2.8em;
+  line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--color-dark-gray);
   text-stroke: 1px var(--color-dark-gray);
 }
 
 .backdrop-title.centered::after {
-  top: -.55em;
+  top: -.25em;
   left: 50%;
   translate: -50% 0;
 }
@@ -726,14 +735,6 @@ h6 {
   margin-bottom: 52px;
 }
 
-.join-us-form-subtitle {
-  font-size: 20px;
-  line-height: 1.65;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--color-light);
-}
-
 .join-us-form-input {
   max-width: 400px;
 }
@@ -747,6 +748,57 @@ h6 {
 .location {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+  height: auto;
+}
+
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
+
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location-discription {
+  max-width: 490px;
+}
+
+.location-discription:not(:last-child) {
+  margin-bottom: 37px;
+}
+
+.family {
+  background-color: var(--color-dark-alternate);
+}
+
+.family-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+  padding-top: 132px;
+  padding-bottom: 62px;
+  text-align: center;
+}
+
+.family-body {
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.family-image {
+  scroll-snap-align: start;
 }
 
 @media (max-width: 1919px) {
@@ -803,6 +855,15 @@ h6 {
 
   .join-us-title:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .family-image {
+    height: 360px;
   }
 }
 
@@ -876,7 +937,7 @@ h6 {
     margin-bottom: 40px;
   }
 
-  .join-us-form-subtitle {
+  .section-description {
     font-size: 16px;
   }
 
@@ -884,5 +945,26 @@ h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+  }
+
+  .location-body {
+    padding-block: 40px;
+  }
+
+  .location-discription:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .family-image {
+    height: 180px;
+  }
+
+  .family-header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .family-body {
+    column-gap: 12px;
   }
 }
