@@ -285,6 +285,11 @@ p:not([class]):not(:last-child) {
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -628,6 +633,10 @@ h6 {
   font-size: 16px;
 }
 
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
+
 .join-us-video {
   width: 100%;
   max-width: 960px;
@@ -733,6 +742,11 @@ h6 {
   display: flex;
   justify-content: center;
   column-gap: 20px;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 1919px) {
