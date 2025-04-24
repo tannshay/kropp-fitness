@@ -776,8 +776,11 @@ select.input:invalid {
 }
 
 .location-map-image {
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
+
 
 .location-body {
   display: flex;
